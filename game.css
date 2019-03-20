@@ -1,0 +1,117 @@
+*{
+
+  margin: 0;
+  box-sizing: border-box;
+}
+.grid{
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+  text-align: center;
+  max-width: 1440px;
+  max-height: 821px !important;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card{
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 30px;
+  perspective: 1000px;
+
+}
+
+header{
+text-align: center;
+}
+.front,
+.back,
+.card{
+  width: 150px;
+  height: 240px;
+
+
+}
+.front{
+  width: 160px;
+  height: 250px;
+}
+
+.card.active{
+  transform: rotateY(180deg);
+}
+.card.match{
+
+}
+.back,
+.front{
+  margin-top: -230px;
+  margin-left: -7px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front{
+  z-index:2;
+  background: url("cards/back1.png") no-repeat center center / contain;s
+}
+
+.back{
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+
+.front.match{
+  background: #fff !important;
+
+}
+.card.match{
+    pointer-events: none;
+}
+#btn{
+  position: absolute;
+  background: #FF1000;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 3px;
+  margin-top: 300px;
+  margin-left: -100px;
+}
+p{
+  text-align: center;
+  font-family: Roboto;
+  color: #fff;
+  font-size: 20px;
+}
+
+.start.hide{
+display:none;
+}
+.pic{
+  transform: rotateY(180deg);
+  width: 150px;
+  height: 200px;
+}
+.startpic{
+width: 500px;
+display: block;
+margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#gameover{
+  margin-top: 10px;
+  margin-left: 460px;
+  background: #FF1000;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 3px;
+  font-family: Roboto;
+  color: #fff;
+  font-size: 20px;
+  display: none;
+}
+#clicks{
+  color: #000;
+}
